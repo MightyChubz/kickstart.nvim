@@ -172,6 +172,10 @@ do
   -- See `:help 'confirm'`
   vim.o.confirm = true
 
+  -- Tab
+  vim.opt.shiftwidth = 4
+  vim.opt.tabstop = 4
+
   -- [[ Basic Keymaps ]]
   --  See `:help vim.keymap.set()`
 
