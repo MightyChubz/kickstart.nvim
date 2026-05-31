@@ -708,6 +708,8 @@ do
     --
     -- But for many setups, the LSP (`ts_ls`) will work just fine
     -- ts_ls = {},
+    ols = {},
+    clangd = {},
 
     stylua = {}, -- Used to format Lua code
 
@@ -790,6 +792,9 @@ do
       local enabled_filetypes = {
         -- lua = true,
         -- python = true,
+        cpp = true,
+        c = true,
+        odin = true,
       }
       if enabled_filetypes[vim.bo[bufnr].filetype] then
         return { timeout_ms = 500 }
@@ -808,6 +813,9 @@ do
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      cpp = { "clangfmt" },
+      c = { "clangfmt" },
+      odin = { "odinfmt" },
     },
   }
 
