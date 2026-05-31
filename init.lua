@@ -188,6 +188,8 @@ do
 
   vim.keymap.set('n', '<C-s>', '<Cmd>w<CR>')
   vim.keymap.set({'v', 'i'}, '<C-s>', '<Esc><Cmd>w<CR>')
+  vim.keymap.set('n', '<leader>qq', "<Cmd>q<CR>")
+
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
   vim.diagnostic.config {
@@ -382,6 +384,7 @@ do
       { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
+      { '<leader>qq', group = 'Exit Neovim', mode = { 'n' }},
       { 'gr', group = 'LSP Actions', mode = { 'n' } },
     },
   }
