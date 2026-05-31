@@ -176,6 +176,9 @@ do
   vim.opt.shiftwidth = 4
   vim.opt.tabstop = 4
 
+  -- Ruler
+  vim.opt.colorcolumn = '120'
+
   -- [[ Basic Keymaps ]]
   --  See `:help vim.keymap.set()`
 
