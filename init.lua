@@ -186,6 +186,8 @@ do
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+  vim.keymap.set('n', '<C-s>', '<Cmd>w<CR>')
+  vim.keymap.set({'v', 'i'}, '<C-s>', '<Esc><Cmd>w<CR>')
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
   vim.diagnostic.config {
